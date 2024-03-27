@@ -16,11 +16,11 @@ console.log(a([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 //[ 1,3,5,7,9 ]
 
 // IIFE Function=>:
-var result = [];
+var result1 = [];
 (function (arr) {
   for (var i = 0; i < arr.length; i++) {
     if (arr[i] % 2 !== 0) {
-      result.push(arr[i]);
+      result1.push(arr[i]);
     }
   }
   console.log(result);
@@ -29,7 +29,7 @@ var result = [];
 //[ 1,3,5,7,9 ]
 
 // Arrow Function =>
-var result = [];
+var result2= [];
 var a = (arr) => {
   for (var i = 0; i < arr.length; i++) {
     if (arr[i] % 2 !== 0) {
@@ -360,17 +360,17 @@ var rotation = function (arr, n, d) {
 };
 var arr = [4, 5, 6, 1, 2, 3];
 var n = arr.length;
-var k = 3;
+var k = 6;
 
 rotation(arr, n, k);
 //Output
-//[1,2,3,4,5,6]
+// [4, 5, 6, 1, 2, 3]
 
 // IIFE function=>
 
 var arr = [4, 5, 6, 1, 2, 3];
 var n = arr.length;
-var k = 3;
+var k = 6;
 
 (function (arr, n, k) {
   var p = 1;
@@ -389,4 +389,4 @@ var k = 3;
   console.log(out);
 })(arr, n, k);
 //output
-//[ 1, 2, 3, 4, 5, 6 ]
+// [4, 5, 6, 1, 2, 3]
