@@ -244,15 +244,15 @@ console.log(palindrome(["abc", "mom", "dad", "madam", "teacher"]));
 // Anonymous function=>:
 var arr1 = [3, 2, 1, 4, 5];
 var arr2 = [8, 6, 7, 9, 10];
-let median = function (arr1, arr2) {
-  let arr = [...arr1, ...arr2];
+var median = function (arr1, arr2) {
+  var arr = [...arr1, ...arr2];
 
   arr.sort((a, b) => a - b);
-  let len = arr.length;
+  var len = arr.length;
 
   if (len % 2 !== 0) {
-    let ans = arr[Math.round(len / 2) - 1];
-    let final = ans;
+    var ans = arr[Math.round(len / 2) - 1];
+    var final = ans;
   } else {
     ans = arr[Math.round(len / 2) - 1] + arr[Math.round(len / 2)];
     final = ans;
@@ -268,14 +268,14 @@ median(arr1, arr2);
 var arr1 = [3, 2, 1, 4, 5];
 var arr2 = [8, 6, 7, 9, 10];
 (function () {
-  let arr = [...arr1, ...arr2];
+  var arr = [...arr1, ...arr2];
 
   arr.sort((a, b) => a - b);
-  let len = arr.length;
+  var len = arr.length;
 
   if (len % 2 !== 0) {
-    let ans = arr[Math.round(len / 2) - 1];
-    let final = ans;
+    var ans = arr[Math.round(len / 2) - 1];
+    var final = ans;
   } else {
     ans = arr[Math.round(len / 2) - 1] + arr[Math.round(len / 2)];
     final = ans;
@@ -293,7 +293,7 @@ var arr2 = [8, 6, 7, 9, 10];
 var dup = function (arr) {
   var frequency = {};
 
-  for (let i = 0; i < arr.length; i++) {
+  for (var i = 0; i < arr.length; i++) {
     if (frequency[arr[i]]) {
       frequency[arr[i]] = frequency[arr[i]] + 1;
     } else {
@@ -301,8 +301,8 @@ var dup = function (arr) {
     }
   }
 
-  let final = [];
-  for (let x in frequency) {
+  var final = [];
+  for (var x in frequency) {
     if (frequency[x] === 1) {
       final.push(x);
     }
@@ -318,7 +318,7 @@ dup([1, 12, 11, 3, 4, 5, 12]);
 (function (arr) {
   var frequency = {};
 
-  for (let i = 0; i < arr.length; i++) {
+  for (var i = 0; i < arr.length; i++) {
     if (frequency[arr[i]]) {
       frequency[arr[i]] = frequency[arr[i]] + 1;
     } else {
@@ -326,8 +326,8 @@ dup([1, 12, 11, 3, 4, 5, 12]);
     }
   }
 
-  let final = [];
-  for (let x in frequency) {
+  var final = [];
+  for (var x in frequency) {
     if (frequency[x] === 1) {
       final.push(x);
     }
@@ -342,18 +342,18 @@ dup([1, 12, 11, 3, 4, 5, 12]);
 
 //h)Rotate an array by K times
 //Anonymous Function=>
-let rotation = function (arr, n, d) {
-  let p = 1;
+var rotation = function (arr, n, d) {
+  var p = 1;
   while (p <= k) {
-    let last = arr[0];
-    for (let i = 0; i < n - 1; i++) {
+    var last = arr[0];
+    for (var i = 0; i < n - 1; i++) {
       arr[i] = arr[i + 1];
     }
     arr[n - 1] = last;
     p++;
   }
-  let out = [];
-  for (let i = 0; i < n; i++) {
+  var out = [];
+  for (var i = 0; i < n; i++) {
     out.push(arr[i]);
   }
   console.log(out);
@@ -373,17 +373,17 @@ var n = arr.length;
 var k = 3;
 
 (function (arr, n, k) {
-  let p = 1;
+  var p = 1;
   while (p <= k) {
-    let last = arr[0];
-    for (let i = 0; i < n - 1; i++) {
+    var last = arr[0];
+    for (var i = 0; i < n - 1; i++) {
       arr[i] = arr[i + 1];
     }
     arr[n - 1] = last;
     p++;
   }
-  let out = [];
-  for (let i = 0; i < n; i++) {
+  var out = [];
+  for (var i = 0; i < n; i++) {
     out.push(arr[i]);
   }
   console.log(out);
